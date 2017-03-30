@@ -1,3 +1,5 @@
+// karma config file specify how we're gonna run our test.
+
 var webpackConfig = require('./webpack.config.js');
 
 
@@ -8,7 +10,7 @@ module.exports = function (config) {
     frameworks: ['mocha'],
     files: ['app/tests/**/*.test.jsx'],
     preprocessors: {
-      'app/tests/**/*.test.jsx': ['webpack', 'sourcemap']
+      'app/tests/**/*.test.jsx': ['webpack', 'sourcemap'] // specify which test files to run and preprocessors to use
     },
     reporters: ['mocha'],
     client: {
