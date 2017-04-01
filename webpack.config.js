@@ -1,5 +1,6 @@
 // __dirname = gives a path to the current folder
 var  webpack = require('webpack');
+var path = require('path');
 
 
 module.exports = {
@@ -49,6 +50,11 @@ module.exports = {
         test: /\.jsx?$/, //regular expression matches any files that has .jsx
         exclude: /(node_modules|bower_components)/ //which folders we wanna ignore
       }
+    ]
+  },
+  sassLoader: {
+    includePaths: [
+      path.resolve(__dirname, './node_modules/foundation-sites/scss')
     ]
   },
   devtool: 'cheap-module-eval-source-map'
